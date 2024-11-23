@@ -11,13 +11,13 @@ RUN apt-get update && apt-get install -y \
     apt-get clean && rm -rf /var/lib/apt/lists/*
 
 # Copy the requirements file to the container
-COPY ../requirements.txt .
+COPY ./requirements.txt .
 
 # Install Python dependencies
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy the application code to the container
-COPY .. .
+COPY ./ ./
 
 # Expose the port the app will run on
 EXPOSE 8000
