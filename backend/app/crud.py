@@ -1,7 +1,6 @@
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy.future import select
-import models
-import schemas
+from app import schemas, models
 
 
 # Retrieve a movie by ID

@@ -30,7 +30,7 @@ class MovieUpdate(MovieBase):
 class Movie(MovieBase):
     """Schema for retrieving a movie with its ID."""
 
-    id: int  # Unique identifier for the movie
+    id: int
 
     class Config:
-        orm_mode = True  # Enable ORM mode to work with SQLAlchemy models
+        from_attributes = True

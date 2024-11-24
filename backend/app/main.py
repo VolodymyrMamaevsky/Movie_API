@@ -1,14 +1,14 @@
 from fastapi import FastAPI, HTTPException, Depends
 from sqlalchemy.ext.asyncio import AsyncSession
 from typing import List
-import models, schemas, crud
-from database import Base, engine, get_db
+from app import models, schemas, crud
+from app.database import Base, engine, get_db
 from fastapi.middleware.cors import CORSMiddleware
 
 
 app = FastAPI(
     title="Movie API",
-    description="API for managing movies, built with FastAPI and PostgreSQL.",
+    description="Test task for company Indeo Solutions",
     version="1.0.0",
 )
 
@@ -23,7 +23,6 @@ app.add_middleware(
 
 @app.get("/")
 async def read_root():
-    """Root endpoint to verify API is running."""
     return {"message": "Welcome to the Movie API!"}
 
 
