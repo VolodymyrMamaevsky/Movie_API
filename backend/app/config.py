@@ -18,6 +18,8 @@ class Settings(BaseSettings):
     DATABASE_URL: str
     TEST_DATABASE_URL: str
 
+    TMDB_API_KEY: str
+
     class Config:
         # Load environment variables from .env file
         env_file = ".env"
